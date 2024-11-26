@@ -1,5 +1,6 @@
 package com.sample.springboot_boilerplate.controller;
 
+import com.sample.springboot_boilerplate.dto.EmployeeDTO;
 import com.sample.springboot_boilerplate.dto.OrganizationDTO;
 import com.sample.springboot_boilerplate.dto.ProductDTO;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -32,6 +33,12 @@ public class OrganizationController {
     public ResponseEntity<List<ProductDTO>> getProductList(@PathVariable("id") Integer id) {
         List<ProductDTO> products = organizationService.getProductList(id);
         return ResponseEntity.ok(products);
+    }
+
+    @GetMapping("/{id}/employee/list")
+    public ResponseEntity<List<EmployeeDTO>> getEmployeeList(@PathVariable("id") Integer id) {
+        List<EmployeeDTO> employees = organizationService.getEmployeeList(id);
+        return ResponseEntity.ok(employees);
     }
 
 
