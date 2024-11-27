@@ -10,4 +10,6 @@ import lombok.NoArgsConstructor;
 public class EmployeeDTO {
     private Integer id;
     private String name;
+    private String emp_mail;
+    private String emp_mngr;
 }

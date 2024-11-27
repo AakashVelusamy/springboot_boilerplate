@@ -34,7 +34,7 @@ public class OrgHandler {
     @SuppressWarnings("unchecked")
     public List<Object[]> getEmployeeList(Integer id) {
         StringBuilder query = new StringBuilder();
-        query.append("select emp_id, emp_name from t_employee where emp_id = :id ");
+        query.append("select emp_id, emp_name, emp_mail, emp_mngr from t_employee where emp_id = :id ");
 
         Query nativeQuery = entityManager.createNativeQuery(query.toString());
         return nativeQuery.setParameter("id", id).getResultList();

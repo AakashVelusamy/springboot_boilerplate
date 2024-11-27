@@ -62,6 +62,8 @@ public class OrganizationServiceImpl implements OrganizationService {
              EmployeeDTO dto = new EmployeeDTO();
              dto.setId(Integer.parseInt(Objects.toString(org[0])));
              dto.setName((String) org[1]);
+             dto.setEmp_mail((String) org[2]);
+             dto.setEmp_mngr((String) org[3]);
 
              employees.add(dto);
         }
